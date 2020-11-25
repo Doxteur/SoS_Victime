@@ -1,0 +1,103 @@
+@font-face {
+    font-family: poppins;
+    src: url(Font/Poppins/Poppins-Regular.ttf);
+    font-family: roboto;
+    src: url(Font/Roboto/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#mainPagesection {
+    background-image: url(Images/Background.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+#header {
+    z-index: 100;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    padding: 20px 10px;
+    overflow: hidden;
+    display: table;
+}
+
+#header img {
+    float: left;
+    width: 150px;
+    margin-left: 35px;
+}
+
+#header ul {
+    float: right;
+    display: flex;
+    margin-right: 50px;
+}
+
+#Active {
+    border-bottom: solid #EA9124 3px;
+}
+
+li {
+    color: #3F72AF;
+    padding: 12px;
+    font-size: 22px;
+    line-height: 60px;
+    font-family: roboto;
+}
+
+span:hover {
+    border-bottom: #EA9124 solid 3px;
+}
+
+
+/* Page Principal */
+
+#mainPage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 650px;
+}
+
+#mainPage h1 {
+    font-size: 80px;
+    font-family: roboto;
+    color: white;
+    font-weight: lighter;
+}
+
+#mainPage p {
+    color: white;
+    font-family: roboto;
+    font-size: 22px;
+    margin-left: 45px;
+    margin-right: 45px
+}
+
+#mainPage h2 {
+    background-color: #3F72AF;
+    font-family: roboto;
+    font-weight: lighter;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    top: 50px;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 200px;
+}
+
+section {
+    height: 980px;
+}
