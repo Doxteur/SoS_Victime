@@ -12,6 +12,11 @@
     text-decoration: none;
 }
 
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 #mainPagesection {
     background-image: url(Images/Background.png);
     background-repeat: no-repeat;
@@ -64,15 +69,73 @@ span:hover {
     border-bottom: #EA9124 solid 3px;
 }
 
+#hamburger {
+    display: none;
+    border: none;
+    background-color: #3F72AF;
+    color: white;
+    position: fixed;
+    top: 5px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+}
+
+nav {
+    z-index: 150;
+    height: 100vh;
+    width: 200px;
+    transform: translateX(-100%);
+    display: table;
+    position: fixed;
+    background-color: #3F72AF;
+    transition: transform 0.5s ease-in-out;
+}
+
+#link {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#link h1 {
+    font-family: poppins;
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    padding: 15px 0 15px 0;
+}
+
+nav.active {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
 
 /* Responsive Header */
 
-@media screen and (max-width: 1024px) {
-    #header img {
+@media screen and (min-width: 1204px) {
+    #aside {
+        transition: all 1s ease-in-out;
         display: none;
     }
+}
+
+@media screen and (max-width: 1204px) {
+    #header {
+        height: 20px;
+    }
+    #header img,
+    li {
+        display: none;
+    }
+    #hamburger {
+        display: inherit;
+        z-index: 350;
+        background-color: #457dc2;
+    }
     body {
-        overflow: hidden;
+        overflow-x: hidden;
     }
 }
 
@@ -95,7 +158,7 @@ span:hover {
     font-weight: lighter;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1204px) {
     #mainPage {
         width: initial;
     }
